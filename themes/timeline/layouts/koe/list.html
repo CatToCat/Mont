@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $paginator := .Paginate .Data.Pages }}
+
+
+<main class="posts">
+   
+    <!-- <h1>{{ .Title }}aaa</h1> -->
+    <div style="text-align: left; margin: 0% 17%;color:aqua;">
+       <p>あのひがら&#8195;何度も夢を見る </p>
+       <p>ぬくえない恐怖&#8195;繰り返し焦躁</p>
+       <p>むげにつづく&#8195;後悔とざんげの日々</p>
+       <p>いまで震えやまず&#8195;たちずくし</p>
+       <p>やり過ごしうちに&#8195;めがさめて</p>
+       <p>答え出ないまま&#8195;きょうもわるいゆめのなかにいる  </p>     
+    </div>  
+
+    {{ if .Content }}
+        <div class="content">{{ .Content }}</div>
+    {{ end }}
+
+
+    <section class="timeline">
+        <div class="container" style="text-align: center!important">           
+            {{ range .Site.Data.koe }}
+                {{ range .koes}}
+                <div class="timeline-item">                 
+                    <div class="timeline-content js--fadeInLeft" >
+                        {{ range .koe}}
+                        <div class="date">{{ .date}}</div> 
+                        <p>{{ .line}}</p>
+                        {{ end }}
+                    </div>
+                </div>  
+                {{ end }}
+            {{ end }}     
+        </div>
+    </section>
+
+</main>
+{{ partial "koebg.html" . }}
+{{ end }}

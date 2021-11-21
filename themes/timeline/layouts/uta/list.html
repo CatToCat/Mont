@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $paginator := .Paginate .Data.Pages }}
+
+
+<main class="posts">
+    <div style="text-align: left; margin: 0% 17%;color:aqua;">
+        <p>A white bird drifting alone , </p>
+        <p>Blending neither into the blue of the sky nor the blue of the sea.</p>  
+        <p>Flying on the white wings with you to the tropical island between the two blue worlds.</p> 
+    </div>  
+
+    {{ if .Content }}
+        <div class="content">{{ .Content }}</div>
+    {{ end }}
+
+    <section class="timeline">
+        <div class="container" style="text-align: center!important">
+            {{ range .Pages.ByDate.Reverse  }} 
+
+            <div class="timeline-item">
+                <!-- <div class="timeline-img"></div> -->
+                <a href="{{.Permalink}}" style="text-decoration: none;">
+                    <div class="timeline-content js--fadeInLeft" >
+                        <!-- <h2 ><a href="{{.Permalink}}"><span class="post-title" >{{.Title}}</span></a></h2> -->
+                        <!-- <div class="date">{{ .Date.Format "Jan 2, 2006"}}</div> -->
+                        
+                        <p>{{.Params.Eventname}}</p>
+                            <!-- {{.Params.Eventlocation}}<br> -->
+                        <img src="{{.Params.EventImage}}" alt="{{.Params.Eventname}}">
+                         
+                        
+                    </div>
+                </a>
+            </div>  
+            {{ end }}   
+        </div>
+    </section>
+
+</main>
+{{ partial "utabg.html" . }}
+{{ end }}
