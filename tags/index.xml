@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mont</title>
-    <link>https://www.orekiyuta.cn/tags/</link>
+    <link>https://www.orekiyuta.cn/Mont/tags/</link>
     <description>Recent content in Tags on Mont</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.orekiyuta.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.orekiyuta.cn/Mont/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
